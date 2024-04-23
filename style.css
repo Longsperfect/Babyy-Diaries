@@ -1,0 +1,179 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-image: url("img/bg.jpg");
+}
+
+/* Button */
+button {
+    border: none;
+    background-color: transparent;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: rgb(102, 102, 102);
+}
+
+i {
+    color: gray;
+    font-size: 4em;
+}
+
+/* Book */
+.book {
+    width: 500px;
+    height: 600px;
+    position: relative;
+    transition: transform 1s;
+}
+
+.paper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+}
+
+.front {
+    backface-visibility: hidden;
+    border-left: 3px solid #ff7d7d;
+}
+
+.front, 
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #FED7D0, #FEC4B9);
+    transform-origin: left;
+    transition: transform 1s;
+}
+
+.front {
+    z-index: 1;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper Flipped */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg)
+}
+
+/* Paper Z-index */
+#p1 {
+    z-index: 10;
+}
+
+#p2 {
+    z-index: 9;
+}
+
+#p3 {
+    z-index: 8;
+}
+
+#p4 {
+    z-index: 7;
+}
+
+#p5 {
+    z-index: 6;
+}
+
+#p6 {
+    z-index: 5;
+}
+#p7 {
+    z-index: 4;
+}
+
+#p8 {
+    z-index: 3;
+}
+
+#p9 {
+    z-index: 2;
+}
+#p10 {
+    z-index: 1;
+}
+
+/* Customization */
+
+.book-title {
+    font-size: 3em;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-style: italic;
+    font-size: 70px;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15), 1px 1px 0 grey, 2px 2px 0 #ff9696, 3px 3px 0 #ff7d7d;
+    color: black
+}
+
+.cover-img {
+    width: 300px;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+#b1 {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    justify-content: space-around;
+}
+
+#b1 h2 {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#b1 p {
+    margin-bottom: 20px;
+}
